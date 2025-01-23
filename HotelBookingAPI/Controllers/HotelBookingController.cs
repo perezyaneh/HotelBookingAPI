@@ -20,7 +20,7 @@ namespace HotelBookingAPI.Controllers
         [HttpPost]
         public JsonResult CreateEdit(HotelBooking booking)
         {
-            if(booking.Id != 0)
+            if(booking.Id != 0 &&  booking.Id < 0)
             {
                 _context.Bookings.Add(booking);
             }
